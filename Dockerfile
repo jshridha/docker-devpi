@@ -17,7 +17,7 @@ RUN /tmp/install_devpi.sh
 
 RUN pip install "devpi-client==2.7.0" "devpi-web==3.1.1"
 
-VOLUME /mnt
+VOLUME /data
 
 EXPOSE 3141
 
