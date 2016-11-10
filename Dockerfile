@@ -1,10 +1,10 @@
-FROM python:3
+FROM python:3-slim
 
 ENV DEVPI_VERSION=4.1.1
 ENV DEVPI_SERVERDIR=/data/server DEVPI_CLIENTDIR=/data/client DEVPI_SERVERPORT=3140
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends supervisor unzip nginx && \
+    apt-get install -y --no-install-recommends supervisor unzip nginx wget patch && \
 #    apt-get install -y --no-install-recommends python-pip python-setuptools python-wheel && \
     apt-get -y clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
