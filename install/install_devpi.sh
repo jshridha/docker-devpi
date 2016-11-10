@@ -16,4 +16,3 @@ cd dist
 pip install devpi_server-*.whl
 
 cd /
-rm -rv /tmp/*
