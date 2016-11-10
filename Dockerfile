@@ -15,7 +15,7 @@ RUN /tmp/install_devpi.sh && /tmp/install_nginx.sh && rm -rv /tmp/*
 
 RUN pip install "devpi-client==2.7.0" "devpi-web==3.1.1"
 
-ADD run.sh /
+ADD run.sh initialize.sh /
 
 ADD nginx/nginx-devpi.conf /etc/nginx/sites-enabled/default
 
