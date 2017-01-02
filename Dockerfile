@@ -1,6 +1,6 @@
 FROM python:3.4-slim
 
-ENV DEVPI_VERSION=4.2.0
+ENV DEVPI_VERSION=4.2.1
 ENV DEVPI_SERVERDIR=/data/server DEVPI_CLIENTDIR=/data/client DEVPI_SERVERPORT=3140
 
 RUN apt-get update && \
