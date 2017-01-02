@@ -1,4 +1,4 @@
-FROM python:3-slim
+FROM python:3.4-slim
 
 ENV DEVPI_VERSION=4.1.1
 ENV DEVPI_SERVERDIR=/data/server DEVPI_CLIENTDIR=/data/client DEVPI_SERVERPORT=3140
