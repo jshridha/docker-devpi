@@ -3,10 +3,11 @@ set -e
 
 pip install wheel
 
-wget https://bitbucket.org/hpk42/devpi/get/server-$DEVPI_VERSION.zip -O /tmp/server.zip
-unzip /tmp/server.zip -d /tmp/src
+pip download --no-binary :all: --no-dependencies -d /tmp devpi-server==$DEVPI_VERSION
+cd /tmp
+tar xzvf devpi-server-$DEVPI_VERSION.tar.gz
 
-cd /tmp/src/hpk42-devpi-*/server/devpi_server
+cd /tmp/devpi-server-$DEVPI_VERSION/devpi_server
 cp /tmp/bodysize.patch .
 patch < bodysize.patch
 rm bodysize.patch
