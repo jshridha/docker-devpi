@@ -11,9 +11,8 @@ RUN apt-get update && \
 
 ADD install /tmp
 
-RUN /tmp/install_devpi.sh && /tmp/install_nginx.sh && rm -rv /tmp/*
-
-RUN pip install "devpi-client==2.7.0" "devpi-web==3.1.1"
+RUN /tmp/install_devpi.sh && /tmp/install_nginx.sh && /tmp/install_devpi_client.sh && \ 
+    rm -rv /tmp/* && rm -rv ~/.cache/pip
 
 ADD run.sh initialize.sh /
 
